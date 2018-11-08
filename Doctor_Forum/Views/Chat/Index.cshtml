@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Doctor_Forum.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "All Doctor's";
+}
+
+<h2>View All Doctor's</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table table-bordered table-hover">
+    <tr>
+       <th>
+           @Html.Label("S/N")
+       </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.Label("Chat Up")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    
+    <tr>
+        <td>
+           
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Send Message", "Edit", new { id=item.Id })
+           
+        </td>
+    </tr>
+}
+
+</table>

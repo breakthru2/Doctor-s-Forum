@@ -40,5 +40,7 @@ namespace Doctor_Forum.Models
         {
             return new ApplicationDbContext();
         }
+
+       
     }
 }
